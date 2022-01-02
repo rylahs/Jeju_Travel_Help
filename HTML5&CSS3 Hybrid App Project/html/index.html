@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+
+   <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+
+
+    <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+	</script>    
+    
+	<style type="text/css">
+		/* 메인 페이지 용 */
+		#logo {
+			width:198px;
+			height:149px;
+			text-indent:-9999px;
+			background-image: url(images/jeju.jpg);
+			background-repeat: no-repeat;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: auto;
+		}   
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   .footer_style {
+			color: white;
+	   }
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		.small {
+			width: 30%;
+		}
+		.large {
+			width: 100%;
+		}
+		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+</style>
+
+    </style>
+</head>
+
+<body>	
+	<!-- 메인 페이지-->
+    <div data-role="page" id="main">
+    	<div data-role="header"data-theme="b">     
+			<h2 id="logo">제주도 자전거 여행!</h2>
+      <a href="index.html" data-theme="b" data-icon="home" data-direction="reverse" class="ui-btn-right">Home</a>
+        </div>         
+        <div data-role="content" data-theme="d">
+
+            <ul data-role="listview" data-inset="true"> 
+                <li><a href="travel.html" data-transition="pop" >
+                            <img src="images/plane.jpg" alt="" class="ui-li-thumb" />
+                            <h3 class="title_style">제주도 이동방법</h3>
+                      </a>
+                </li> 
+                <li ><a href="recommend.html" data-transition="flip" >
+                            <img src="images/bicycle.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">경로 추천</h3>
+                        </a>
+                </li> 
+                <li><a href="tourist_place.html" data-transition="pop" >
+                            <img src="images/place.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">제주도 명소</h3>
+                      </a>
+                </li> 
+                <li><a href="eating.html" data-transition="pop" >
+                            <img src="images/cook.jpg" alt="" class="ui-li-thumb" />
+                            <h3 class="title_style">먹거리 Tip</h3>
+                      </a>
+                <li ><a href="borrow.html" data-transition="pop" >
+                            <img src="images/bicycle.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">자전거 대여</h3>
+                        </a>
+                </li> 
+                <li><a href="tip.html" data-transition="pop" >
+                            <img src="images/jejuicon.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">자전거 여행 팁</h3>
+                      </a>
+                </li> 
+                <li><a href="http://www.kma.go.kr/weather/main_all.jsp?stncd=184" target="_blank" rel="external">
+                            <img src="images/kma.jpg" alt="" class="ui-li-thumb" />
+                           <h3 class="title_style">기상정보</h3>
+                           </a>
+                </li> 
+            </ul>         
+        </div> <!-- content 끝-->		
+                <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>
+    </div><!-- page 끝-->
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+        <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+	</script>
+    	<style type="text/css">
+		/* 메인 페이지 용 */
+		#logo {
+			width:176px;
+			height:132px;
+			text-indent:-9999px;
+			background-image: url(images/CI_TITLE.jpg);
+			background-repeat: no-repeat;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 10px;
+			margin-left: auto;
+		}   
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		.small {
+			width: 50%;
+		}
+		.large {
+			width: 100%;
+		}
+		.largeonly {
+			width: 100%;
+		}		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+</style>
+
+    </style>
+</head>
+
+<body>
+<div data-role="page" id="course_review" data-add-back-btn="true" > 
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        	<h1>Course 2 소개</h1>
+        </div> 
+        
+        <div data-role="content" data-theme="c">  
+   
+                 <img class="large"  id="pic_univ" src="images/course_c5all.jpg" alt="">  </div>
+              <div>
+         <p>이 코스는 5일 중 첫날 출발이 늦은 코스입니다. </p> <p> 우도를 들리면서 이동하는 코스이기도 합니다.</p><p>1일째에는 늦었기때문에 협재까지만 진행합니다. </p><p>2일째에는 경사가 오르막이 있습니다. </p> <p>유의하시고 대정에서 조금 지나 대정리까지 진행합니다.</p> <p>3일째에는 중문관광단지보다는 서귀포 시내, 새섬, 쇠소깍을 추천합니다. </p> <p>>우도 관광을 위해 표선까지 가는 것을 추천합니다.</p><p>4일째 오전에 성산까지 라이딩한 후에 우도를 오후에 관광합니다.</p> <p>5일째는 오후1시까지 김녕에 도착하고 3시쯤에 제주에 도착하게됩니다.</p> </div>
+                <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>
+ 
+</body>
+</html>

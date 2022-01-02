@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+    
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+
+   <!-- 대학교 소개 자바스크립트 설정 추가-->
+    <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+		
+	</script>    
+    
+	<style type="text/css">
+		/* 메인 페이지 용 */
+		#logo {
+			width:176px;
+			height:132px;
+			text-indent:-9999px;
+			background-image: url(images/CI_TITLE.jpg);
+			background-repeat: no-repeat;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 10px;
+			margin-left: auto;
+		}   
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		#style_intro {
+			font-weight: bold;
+		}
+		
+		.small {
+			width: 30%;
+		}
+		.large {
+			width: 100%;
+		}
+		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+		body,ul,li {	
+		padding:0;
+    	margin:0;
+    	border:0;
+   }
+   		
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="jeju_images" class="gallery-page">
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        <h1> 제주도 명소 - 소인국 테마파크 </h1>
+        </div>
+        
+	<div data-role="content"  data-theme="c">
+    	<ul class="gallery">
+        	<li><a href="pic/full/small.jpg" rel="external"><img src="pic/thumb/small.jpg" alt="소인국 테마파크"/></a></li>
+            <li><a href="pic/full/small2.jpg" rel="external"><img src="pic/thumb/small2.jpg" alt="소인국 테마파크"/></a></li>
+            <li><a href="pic/full/small3.jpg" rel="external"><img src="pic/thumb/small3.jpg" alt="소인국 테마파크" /></a></li>
+            <li><a href="pic/full/small4.jpg" rel="external"><img src="pic/thumb/small4.jpg" alt="소인국 테마파크" /></a></li>
+            <li><a href="pic/full/small5.jpg" rel="external"><img src="pic/thumb/small5.jpg" alt="소인국 테마파크" /></a></li>
+            <li><a href="pic/full/small6.jpg" rel="external"><img src="pic/thumb/small6.jpg" alt="소인국 테마파크" /></a></li>
+        </ul>
+        </div>
+        <div id = 'style_intro'>
+   미니어처 테마파크로, 세계 각국의 유명한 건축물과 문화유산을 일정 비율로 축소하여 전시해 놓은 곳입니다. 우리나라의 불국사, 첨성대를 비롯하여, 미국의 자유의 여신상, 호주의 오페라하우스, 파리의 개선문, 중국의 만리장성, 인도의 타지마할 등 약 100여 점의 미니어처를 볼 수 있습니다.
+   </div>        
+        <div align= "center">
+        <li><a href="http://map.naver.com/?mid=bl015760265" data-role="button" target="_blank">
+         	쇠소깍 위치 보기</a>
+        </li>    
+        </div>    
+                        <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>      
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+    
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+
+   <!-- 대학교 소개 자바스크립트 설정 추가-->
+    <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+		
+	</script>    
+    
+	<style type="text/css">
+		/* 메인 페이지 용 */
+		
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		#style_intro {
+			font-weight: bold;
+		}
+		
+		.small {
+			width: 30%;
+		}
+		.large {
+			width: 100%;
+		}
+		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+		body,ul,li {	
+		padding:0;
+    	margin:0;
+    	border:0;
+   }
+   		
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="jeju_images" class="gallery-page">
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        <h1> 제주도 명소 - 우도 </h1>
+        </div>
+        
+	<div data-role="content"  data-theme="c">
+    	<ul class="gallery">
+        	<li><a href="pic/full/udo.jpg" rel="external"><img src="pic/thumb/udo.jpg" alt="우도"/></a></li>
+            <li><a href="pic/full/udo2.jpg" rel="external"><img src="pic/thumb/udo2.jpg" alt="우도"/></a></li>
+                <li><a href="pic/full/udo3.jpg" rel="external"><img src="pic/thumb/udo3.jpg" alt="우도" /></a></li>
+                <li><a href="pic/full/udo4.jpg" rel="external"><img src="pic/thumb/udo4.jpg" alt="우도" /></a></li>
+                <li><a href="pic/full/udo5.jpg" rel="external"><img src="pic/thumb/udo5.jpg" alt="우도" /></a></li>
+                <li><a href="pic/full/udo6.jpg" rel="external"><img src="pic/thumb/udo6.jpg" alt="우도" /></a></li>
+        </ul>
+        </div>
+        <div id = 'style_intro'>
+  섬의 형태가 소가 드러누웠거나 머리를 내민 모습과 같다고 하여 우도(牛島)로 이름 붙여진 섬으로, 새하얀 모래사장과 에메랄드빛 바다가 마치 지중해에 와 있는 느낌이 들게 하는 곳입니다. </div>        
+        <div align= "center">
+        <li><a href="http://map.naver.com/?mid=bl014439740" data-role="button" target="_blank">
+         	우도 위치 보기</a>
+        </li>    
+        </div>
+          <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>          
+    </div>
+</body>
+</html>

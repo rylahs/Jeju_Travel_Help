@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+        <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+	</script>
+    	<style type="text/css">
+		/* 메인 페이지 용 */
+		#logo {
+			width:176px;
+			height:132px;
+			text-indent:-9999px;
+			background-image: url(images/CI_TITLE.jpg);
+			background-repeat: no-repeat;
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 10px;
+			margin-left: auto;
+		}   
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		.small {
+			width: 50%;
+		}
+		.large {
+			width: 100%;
+		}
+		.largeonly {
+			width: 100%;
+		}		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+</style>
+
+    </style>
+</head>
+
+<body>
+<div data-role="page" id="course_review" data-add-back-btn="true" > 
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        	<h1>Course 1 소개</h1>
+        </div> 
+        
+        <div data-role="content" data-theme="c">  
+   
+                 <img class="large"  id="pic_univ" src="images/course_c4all.jpg" alt="">  </div>
+              <div>
+         <p>이 코스는 5일동안 여행하는 초보코스입니다. </p> <p> 평균 5시간정도 타고 남은 시간을 체험이나 관광위주의 자전거여행 일정/코스입니다.</p><p>1일째에는 아무래도 적응해야 되기 때문에 협재 </p> <p> 혹은 더 진행 가능하다면 고산까지 진행하시는게 좋을 것 같습니다</p><p>2일째에는 거리는 1일째와 같지만 경사가 있습니다. </p> <p>그래서 대정까지만 진행하고 다음날 일찍 출발합니다.</p> <p>3일째에는 남원까지 가는 동안 체험 관광을 많이 합니다. </p> <p>>오후 4시까지만 서귀포에 진입하시면 됩니다.</p><p>4일째에 우도는 생략하고 성산까지 진행하고, 세화해안도로를 즐깁니다.</p> <p>5일째는 6시간정도의 거리니 그정도 여유롭게 진행하시면 됩니다.</p> </div>
+                <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>
+ 
+</body>
+</html>

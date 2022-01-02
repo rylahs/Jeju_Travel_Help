@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 자전거 여행!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+    
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+
+   <!-- 대학교 소개 자바스크립트 설정 추가-->
+    <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+		
+	</script>    
+    
+	<style type="text/css">
+		/* 메인 페이지 용 */
+		
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		#style_intro {
+			font-weight: bold;
+		}
+		
+		.small {
+			width: 30%;
+		}
+		.large {
+			width: 100%;
+		}
+		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+		body,ul,li {	
+		padding:0;
+    	margin:0;
+    	border:0;
+   }
+   		
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="jeju_images" class="gallery-page">
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        <h1> 제주도 먹거리 - 몸국 </h1>
+        </div>
+        
+	<div data-role="content"  data-theme="c">
+    	<ul class="gallery">
+        	<li><a href="pic/full/body.jpg" rel="external"><img src="pic/thumb/body.jpg" alt="몸국"/></a></li>
+            <li><a href="pic/full/body2.jpg" rel="external"><img src="pic/thumb/body2.jpg" alt="몸국"/></a></li>
+            <li><a href="pic/full/body3.jpg" rel="external"><img src="pic/thumb/body3.jpg" alt="몸국" /></a></li>
+            <li><a href="pic/full/body4.jpg" rel="external"><img src="pic/thumb/body4.jpg" alt="몸국" /></a></li>
+            <li><a href="pic/full/body5.jpg" rel="external"><img src="pic/thumb/body5.jpg" alt="몸국" /></a></li>
+        
+        </ul>
+        </div>
+        <div id = 'style_intro'>
+  몸국은 제주 지역에서 돼지고기 삶은 육수에 불린 모자반을 넣어 만든 국입니다.
+ </div>        <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>         
+    </div>
+</body>
+</html>

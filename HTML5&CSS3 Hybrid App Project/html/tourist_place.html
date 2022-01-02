@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>제주도 명소!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="themes/mytheme.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+    <!-- Photo Swipe CSS 설정 추가 -->
+   	<link href="photoswipe/examples/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script> 
+    
+     <!-- Photo Swipe 자바스크립트 설정 추가 -->
+ 	<script src="photoswipe/lib/klass.min.js"></script>   
+	<script src="photoswipe/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="photoswipe/create_ps_instance.js"></script>
+
+   <!-- 대학교 소개 자바스크립트 설정 추가-->
+    <script type="text/javascript" >
+		$(document).ready(function() {
+			// 처음 flag값을 false로 초기화 시킴
+			$("#pic_univ").data("flag","false");
+			
+			// flag 값에 따라 스타일을 small과 large를 교환하며 적용
+			$("#pic_univ").click(  function() {				
+				var bflag = $("#pic_univ").data("flag");	
+				if (bflag == "false" ) {
+					bflag = "true";
+					$("#pic_univ").removeClass("small");
+					$("#pic_univ").addClass("large");
+				} else {
+					bflag = "false";
+					$("#pic_univ").removeClass("large");
+					$("#pic_univ").addClass("small");
+				};
+				$("#pic_univ").data("flag",bflag);
+			} );				
+		});
+	</script>    
+    
+	<style type="text/css">
+		/* 메인 페이지 용 */
+		
+	   .title_style {
+			color: #3F3C30;
+			padding-top: 10px;
+	   }
+	   
+	   /* 대학교 소개용*/
+	   #pic_univ {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			-webkit-transition-property: width;
+			-webkit-transition-duration: .3s;
+		}
+		.small {
+			width: 50%;
+		}
+		.large {
+			width: 100%;
+		}
+		.largeonly {
+			width: 100%;
+		}		
+		.clear_both {
+			clear: both;
+		}		
+		.bold_style {
+			font-weight: bold;
+			color: #950000;
+		}
+</style>
+
+    </style>
+</head>
+
+<body>	
+   
+    <div data-role="page" >
+		<div data-role="header"data-theme="b">
+          <a href="#" data-rel="back" data-theme="b" data-icon="back" data-direction="reverse">Back</a>
+        	<a href="index.html" data-icon="home" data-theme="b" data-direction="reverse" class="ui-btn-right">Home</a>
+        	<h1>제주도 이동 방법</h1>
+        </div>     
+            <div data-role="content" data-theme="c">
+
+            <ul data-role="listview" data-inset="true"> 
+                <li><a href="ecoland.html" data-transition="pop" >
+                            <img src="pic/thumb/t-ecoland.jpg" alt="" class="ui-li-thumb" />
+                            <h3 class="title_style">에코랜드</h3>
+                      </a>
+         		</li> 
+                <li ><a href="camelia.html"data-transition="pop"> <img src="pic/thumb/t-camelia.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">카멜리아힐</h3>
+                        </a>
+               	</li> 
+                <li ><a href="sungsan.html"data-transition="pop"> <img src="pic/thumb/t-sungsan.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">성산일출봉</h3>
+                        </a>
+                </li> 
+                 <li ><a href="udo.html"data-transition="pop"> <img src="pic/thumb/t-udo.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">우도</h3>
+                        </a>
+                </li> 
+                 <li ><a href="chunjiyoen.html"data-transition="pop"><img src="pic/thumb/t-chunji.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">천지연</h3>
+                        </a>
+                </li> 
+                 <li ><a href="manjang.html" data-transition="pop">
+                            <img src="pic/thumb/t-manjang.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">만장굴</h3>
+                        </a>
+                </li> 
+                <li ><a href="sokak.html" data-transition="pop">
+                            <img src="pic/thumb/t-sokak.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">쇠소깍</h3>
+                        </a>
+                </li> 
+                <li ><a href="small.html"data-transition="pop" >
+                            <img src="pic/thumb/t-small.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">소인국 테마파크</h3>
+                        </a>
+                </li> 
+                <li ><a href="saryuni.html" data-transition="pop">
+                            <img src="pic/thumb/t-saryuni.jpg" alt="" class="ui-li-thumb"/>
+                            <h3 class="title_style">사려니 숲길</h3>
+                        </a>
+                </li> 
+                
+          </ul>
+     </div>
+       <div data-role="footer" data-theme="b">
+            <h2 class="footer_style">Copyright &copy;제주도 자전거 여행 2013 All rights reserved </h2>
+   </div>
+  </div>
+
+   
+
+</body>
+</html>
