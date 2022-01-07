@@ -18,7 +18,7 @@ Cancel changes
 - Tool: Photoshop5, Phonegap
 
 # 상세 내용
-- Report.pdf 참고
+- [Report.pdf](Report.pdf) 참고
 
 # 기타 개인 의견
 - HTML5가 표준안이 확정 되기 전에 시작했던 프로젝트라 현재와 비교했을 때 부족한 점이 매우 매우 많다고 생각한다.
