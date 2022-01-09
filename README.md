@@ -18,7 +18,10 @@ Cancel changes
 - Tool: Photoshop5, Phonegap
 
 # 상세 내용
-- [Report.pdf](Report.pdf) 참고
+- [Report.pdf](Report.pdf) 참고   
+- [JejuBicycle.apk](https://drive.google.com/file/d/1m_zxx95qfJWy0QoW41sH7cMKcqtzlA-K/view?usp=sharing) 참고    
+- [JejuBicycle.7z](https://drive.google.com/file/d/1vBqHkxdIDPpe3ShsZWaThL7p-thDEyh1/view?usp=sharing) 참고    
+- APK 파일과 PhoneGap 소스 파일을 따로 뺀 이유는 Github 용량상의 이유입니다.    
 
 # 기타 개인 의견
 - HTML5가 표준안이 확정 되기 전에 시작했던 프로젝트라 현재와 비교했을 때 부족한 점이 매우 매우 많다고 생각한다.
